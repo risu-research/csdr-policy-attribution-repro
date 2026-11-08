@@ -1,0 +1,35 @@
+name: Check published v1.0.0 GitHub Release and Zenodo DOI
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/check-zenodo-doi.yml'
+      - 'docs/DOI_RECHECK_REQUEST_v1.0.0.txt'
+permissions:
+  contents: write
+concurrency:
+  group: csdr-public-doi-audit
+  cancel-in-progress: false
+jobs:
+  check:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Read GitHub Release and Zenodo public record status
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python scripts/check_zenodo_public_status.py
+      - name: Save non-sensitive status to repository
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/ZENODO_RELEASE_STATUS_v1.0.0.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Record verified GitHub release and Zenodo DOI lookup status'
+            git push origin HEAD:main
+          fi
