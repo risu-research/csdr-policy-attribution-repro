@@ -1,0 +1,7 @@
+CSDR Policy Attribution Reproduction Package v1.0.0
+Release authorization recorded: 2026-11-08
+Repository: https://github.com/risu-research/csdr-policy-attribution-repro
+The researcher confirmed that the Zenodo GitHub integration switch for this repository was enabled.
+This marker triggers .github/workflows/publish-v1.0.0.yml on a push to main.
+The workflow must successfully complete the unit tests and independent original Common Crawl archive re-verification before creating v1.0.0.
+Zenodo DOI creation is a separate external process and must be verified after the GitHub Release.
