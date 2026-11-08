@@ -1,0 +1,9 @@
+# The archive's third-party page bodies are downloaded by each replicator.
+cache/
+results/
+*.pyc
+__pycache__/
+.venv/
+.env
+*.log
+.DS_Store

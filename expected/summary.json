@@ -1,0 +1,23 @@
+{
+  "dataset": "CSDR selected historical policy audit",
+  "original_http_warc_responses_verified": 15,
+  "distinct_sponsor_page_identities": 9,
+  "distinct_literal_target_urls": 11,
+  "policy_source_pairs_full_ordered_match": 3,
+  "policy_source_pairs_tested": 3,
+  "selected_other_controls_full_ordered_match": 0,
+  "selected_other_controls_tested": 6,
+  "stable_same_sponsor_state_pairs": 5,
+  "bayer_2022_2023_normalized_paragraph_overlap": 0,
+  "initial_route_records_in_preserved_ledger": 14,
+  "initial_route_group_counts": {
+    "AstraZeneca": 5,
+    "MSD": 5,
+    "GSK": 2,
+    "Roche": 1,
+    "Lilly": 1
+  },
+  "historical_19_page_corpus_raw_complete": false,
+  "prior_route_http_snapshots_complete": false,
+  "warning": "Case-selected examples and controls; no prevalence, accuracy, applicant impact or causal inference."
+}

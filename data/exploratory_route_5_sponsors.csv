@@ -1,0 +1,6 @@
+sponsor_group,n_trials,handoff_class,legacy_evidence,observed_transition,broken_sponsor_handoff,evidence_limit
+AstraZeneca,5,NOTICE_AND_LIVE_LINK,Old AstraZeneca PharmaCM landing,Notice: external researchers must use Vivli; clickable destination,NO,No direct IPD availability checked; old portal no longer initiation
+MSD,5,REDIRECT_BRIDGE_TO_LIVE_FORM,EngageZone old documentation path,HTTP redirect to retired-site bridge which links live MSD request form,NO,Original link still helps user find application; not dead end
+GSK,2,LEGACY_CATALOG_AND_NEW_ROUTE,CSDR legacy study catalog + sponsor page,Exact NCT dataset listing retained; new proposals routed to Vivli since 2023,NO,Ready to Share on legacy site is not present-day approval
+Roche,1,SPONSOR_WEBSITE_CHAIN_TO_VIVLI,CSDR sponsor-specific policy,Old page says no CSDR requests; links Roche site that directs medicinal-product IPD to Vivli,NO,Generic sponsor route only; exact NCT listing not checked
+Lilly,1,BROKEN_SPONSOR_HANDOFF_LINK,CSDR legacy sponsor policy,Old sponsor page says no CSDR requests but linked lilly.com/clinical-study-data-sharing is HTTP 404,YES,Independent current Lilly/Vivli pages give a working path; CSDR Lilly page below notice mixes Boehringer Ingelheim text

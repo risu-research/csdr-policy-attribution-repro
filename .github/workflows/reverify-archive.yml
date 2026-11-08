@@ -1,0 +1,32 @@
+name: Reverify public archive
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: csdr-manual-external-reverification
+  cancel-in-progress: false
+jobs:
+  reverify-from-scratch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Install pinned parser
+        run: python -m pip install -r requirements.txt
+      - name: Run offline unit tests
+        run: python -m unittest discover -s tests -v
+      - name: Fetch original remote data and independently verify
+        run: python reproduce.py all
+      - name: Compare regenerated outputs with frozen published expected values
+        run: python check_outputs.py
+      - name: Upload summaries only, not copyrighted WARC bodies
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: csdr-reproduction-summary
+          path: results/
+          if-no-files-found: error

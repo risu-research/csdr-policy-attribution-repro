@@ -1,0 +1,10 @@
+role,recipient,recipient_id,comparator,comparator_id,recipient_paragraphs,comparator_paragraphs,exact_paragraph_occurrence_overlap,full_body_identical_in_order,captures_delta_seconds,same_utc_calendar_day
+source,Lilly,Lilly_20190819004537,Boehringer Ingelheim,Boehringer_Ingelheim_20190819004700,27,27,27,True,83,True
+other,Lilly,Lilly_20190819004537,Roche,Roche_20190724094800,27,19,0,False,-2213857,False
+source,Bayer,Bayer_20230201190237,Sanofi,Sanofi_20230201191324,25,25,25,True,647,True
+other,Bayer,Bayer_20230201190237,Boehringer Ingelheim,Boehringer_Ingelheim_20230201185708,25,27,0,False,-329,True
+other,Bayer,Bayer_20230201190237,Takeda,Takeda_20230201185038,25,16,0,False,-719,True
+other,Bayer,Bayer_20230201190237,Roche,Roche_20230208004914,25,19,0,False,539197,False
+source,ONO,ONO_20240914114855,UCB,UCB_20241015150157,21,21,21,True,2689982,False
+other,ONO,ONO_20240914114855,Roche,Roche_20240914112311,21,19,0,False,-1544,True
+other,ONO,ONO_20240914114855,GSK,GSK_20240914114012,21,25,0,False,-523,True
