@@ -1,5 +1,9 @@
 # CSDR sponsor-policy attribution: reproducibility package
 
+[![Zenodo DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24057242.svg)](https://doi.org/10.5281/zenodo.24057242)
+
+**Archived release:** [Zenodo v1.0.0](https://zenodo.org/records/24057242) · [GitHub v1.0.0](https://github.com/risu-research/csdr-policy-attribution-repro/releases/tag/v1.0.0) · **version DOI:** `10.5281/zenodo.24057242`. The frozen `v1.0.0` tag identifies the published reproducibility package; the `main` branch may receive later documentation updates.
+
 **Reproducible research companion to:** *When Trial Data Portals Move: What Remains Findable?* (BIBM 2026, poster P283)  
 **Author:** Moon Hwan Lee, RISU Institute  
 **Package version:** `v1.0.0` (2026-11-08)
@@ -94,7 +98,7 @@ The previously reported Lilly and ONO pre-transition *own-sponsor* pages are anc
 
 ## Academic citation and versioning
 
-Use `CITATION.cff` to credit the software and metadata. Once this repository has a public release and Zenodo has minted a DOI, cite the **version-specific** DOI in the manuscript. Do not paste placeholder URLs or DOIs into the paper.
+Cite the archived software release with its **version-specific DOI**: [10.5281/zenodo.24057242](https://doi.org/10.5281/zenodo.24057242). `CITATION.cff` also identifies the package and its author. For subsequent software versions, cite the DOI corresponding to the version actually used.
 
 **Licensing:** MIT license applies to original code only; original metadata tables are released under CC0-1.0 (`LICENSE-DATA`). Third-party CSDR page content remains subject to its owners' rights.
 
