@@ -1,0 +1,20 @@
+{
+  "repository": "https://github.com/risu-research/csdr-policy-attribution-repro",
+  "tag": "v1.0.0",
+  "github_release": {
+    "status": "published",
+    "url": "https://github.com/risu-research/csdr-policy-attribution-repro/releases/tag/v1.0.0",
+    "published_at": "2026-11-08T17:23:08Z",
+    "tag": "v1.0.0",
+    "prerelease": false
+  },
+  "zenodo": {
+    "status": "published_verified",
+    "doi": "10.5281/zenodo.24057242",
+    "url": "https://zenodo.org/records/24057242",
+    "record_id": 24057242,
+    "title": "When Trial Data Portals Move: CSDR Sponsor-Policy Attribution Reproduction Package",
+    "version": "v1.0.0"
+  },
+  "note": "A missing public search hit is not proof that Zenodo did not create a record."
+}
