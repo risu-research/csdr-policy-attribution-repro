@@ -1,12 +1,14 @@
 cff-version: 1.2.0
-message: 'Please cite the version-specific Zenodo DOI once the public release is archived. Until then cite this software/reproducibility package by title and version.'
+message: 'Please cite the version-specific Zenodo DOI for the release used. Before DOI publication, cite the repository and version.'
 title: 'When Trial Data Portals Move: CSDR Sponsor-Policy Attribution Reproduction Package'
 authors:
   - family-names: Lee
     given-names: Moon Hwan
+    affiliation: RISU Institute
 version: 1.0.0
 date-released: 2026-11-08
 type: software
+abstract: 'Scripts and public archive coordinates for independent verification of dated clinical-trial sponsor-policy attribution at ClinicalStudyDataRequest.com. The package checks 15 original HTTP/WARC records and compares three policy-substitution cases with selected historical controls. Exploratory trial-route observations are preserved separately and are not claimed as independently replayed original HTTP captures.'
 keywords:
   - clinical trial data sharing
   - Common Crawl
@@ -14,3 +16,4 @@ keywords:
   - policy provenance
   - reproducible research
 license: MIT
+repository-code: 'https://github.com/risu-research/csdr-policy-attribution-repro'
