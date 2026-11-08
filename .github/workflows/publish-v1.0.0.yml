@@ -1,0 +1,44 @@
+name: Publish v1.0.0 after Zenodo connection
+on:
+  workflow_dispatch:
+    inputs:
+      zenodo_enabled:
+        description: 'I have enabled risu-research/csdr-policy-attribution-repro in Zenodo GitHub integration'
+        required: true
+        type: boolean
+        default: false
+  push:
+    paths:
+      - 'docs/ZENODO_INTEGRATION_CONFIRMED_v1.0.0.txt'
+permissions:
+  contents: write
+concurrency:
+  group: csdr-first-release-v1.0.0
+  cancel-in-progress: false
+jobs:
+  verify-and-release:
+    if: github.ref == 'refs/heads/main' && (github.event_name == 'push' || inputs.zenodo_enabled == true)
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Install pinned dependencies
+        run: python -m pip install -r requirements.txt
+      - name: Test standalone parser
+        run: python -m unittest discover -s tests -v
+      - name: Verify original Common Crawl evidence and expected outputs
+        run: |
+          python reproduce.py all
+          python check_outputs.py
+      - name: Publish version-tagged GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if gh release view v1.0.0 --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            echo 'Release v1.0.0 already exists; skipping.'
+            exit 0
+          fi
+          gh release create v1.0.0 --repo "$GITHUB_REPOSITORY" --target "$GITHUB_SHA" --title 'CSDR Policy Attribution Reproduction Package v1.0.0' --notes-file RELEASE_NOTES_v1.0.0.md --latest
