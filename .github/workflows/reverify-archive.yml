@@ -1,6 +1,15 @@
 name: Reverify public archive
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/reverify-archive.yml"
+      - "src/repro.py"
+      - "reproduce.py"
+      - "data/captures.csv"
+      - "requirements.txt"
+      - "tests/**"
+      - "expected/**"
 permissions:
   contents: read
 concurrency:
