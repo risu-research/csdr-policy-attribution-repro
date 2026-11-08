@@ -41,7 +41,7 @@ hits = {}
 errors = []
 for query in searches:
     try:
-        url = "https://zenodo.org/api/records/?" + urllib.parse.urlencode({"q":query,"size":25,"sort":"newest"})
+        url = "https://zenodo.org/api/records/?" + urllib.parse.urlencode({"q":query,"size":25,"sort":"mostrecent"})
         result = request_json(url)
         for item in result.get("hits",{}).get("hits",[]):
             hits[str(item.get("id"))] = item
