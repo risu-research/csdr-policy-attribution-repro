@@ -4,7 +4,7 @@
 
 **Archived release:** [Zenodo v1.0.0](https://zenodo.org/records/24057242) · [GitHub v1.0.0](https://github.com/risu-research/csdr-policy-attribution-repro/releases/tag/v1.0.0) · **version DOI:** `10.5281/zenodo.24057242`. The frozen `v1.0.0` tag identifies the published reproducibility package; the `main` branch may receive later documentation updates.
 
-**Reproducible research companion to:** *When Trial Data Portals Move: What Remains Findable?* (BIBM 2026, poster P283)  
+**Reproducible research companion to:** *When Trial Data Portals Move: Cross-Sponsor Policy Mismatches* (IEEE BIBM 2026, accepted poster P283; proceedings forthcoming)  
 **Author:** Moon Hwan Lee, RISU Institute  
 **Package version:** `v1.0.0` (2026-11-08)
 
